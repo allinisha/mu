@@ -15,7 +15,7 @@ jobs:
               uses: actions/setup-node@master
             - run: yarn install
             - run: yarn run build
-            - run: zip -q -r dist.zip ./dist
+            - run: zip -q -r dist.zip ./*
 
             - name: Get current date
               id: date
@@ -56,4 +56,5 @@ jobs:
                       rm -rf
                       wget https://github.com/allinisha/mu/releases/latest/download/dist.zip -O dist.zip
                       unzip dist.zip
+                      rm -f dist.zip
                       pm2 reload all
