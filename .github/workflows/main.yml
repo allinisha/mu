@@ -15,7 +15,7 @@ jobs:
               uses: actions/setup-node@master
             - run: yarn install
             - run: yarn run build
-            - run: zip -q -r dist.zip ./*
+            - run: zip -q -r dist.zip ./dist/*
 
             - name: Get current date
               id: date
