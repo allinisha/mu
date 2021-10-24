@@ -24,8 +24,8 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.MU }}
               with:
-                  tag_name: ${{ github.ref }}
-                  release_name: Release ${{ github.ref }}
+                  tag_name: tag-${{ steps.date.outputs.date }}
+                  release_name: release-${{ steps.date.outputs.date }}
                   draft: false
                   prerelease: false
 
@@ -51,5 +51,5 @@ jobs:
                       cd /home/website/whereismu/
                       rm -rf
                       wget https://github.com/allinisha/mu/releases/latest/download/dist.zip -O dist.zip
-                      upzip dist.zip
+                      unzip dist.zip
                       pm2 reload
