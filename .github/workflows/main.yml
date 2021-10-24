@@ -54,4 +54,4 @@ jobs:
                       rm -rf
                       wget https://github.com/allinisha/mu/releases/latest/download/dist.zip -O dist.zip
                       unzip dist.zip
-                      pm2 reload
+                      pm2 reload all
