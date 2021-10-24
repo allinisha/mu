@@ -257,18 +257,7 @@ module.exports = (env = {}) => {
 							background_color: process.env.APP_BACKGROUND_COLOR,
 							theme_color: process.env.APP_THEME_COLOR,
 							inject: true,
-							ios: true,
-							icons: [
-								{
-									src: r(process.env.APP_ICON),
-									sizes: [72, 96, 128, 144, 192, 384, 512]
-								},
-								{
-									src: r(process.env.APP_ICON),
-									sizes: [120, 152, 167, 180],
-									ios: true
-								}
-							]
+							ios: true
 						}),
 						new PrerenderSPAPlugin({
 							staticDir: join(__dirname, 'dist'),
