@@ -1,0 +1,60 @@
+$containerMargin : 0 8%;
+$commonFontSize: 14px;
+$commonLineHeight: 1.6rem;
+
+.chapter{
+  margin-top: 10px;
+  .disabled{
+    color: #e2dfdf;
+  }
+  
+  .chapter-header{
+    .chapter-name{
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      text-align: center;
+      background: #fff;
+      padding: 3px 0;
+      font-size: 12px;
+      color: #bbb;
+    }
+  }
+  .chapter-container{
+    padding: 20px 8%;
+    
+    .chapter-content{
+      margin-bottom: 40px;
+      p{
+        font-size: $commonFontSize;
+        line-height: $commonLineHeight;
+        margin-bottom: 16px;
+        color: #434356;
+      }
+    }
+    .nav-bottom{
+      display: flex;
+      justify-content: space-between;
+      margin: $containerMargin;
+      font-size: $commonFontSize;
+      color: #b3b3b3;
+      cursor: pointer;
+    }
+    .space-bottom{
+      height: 30px;
+    }
+  }
+  
+  .chapter-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: #fff;
+    padding: 3px 0;
+    font-size: 12px;
+    color: #bbb;
+  }
+}

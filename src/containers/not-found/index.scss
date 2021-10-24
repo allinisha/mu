@@ -1,0 +1,20 @@
+.not-found {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	margin: 20% 8%;
+	p {
+		font-size: 24px;
+		color: #cacaca;
+		margin-top: 0;
+	}
+	.tip {
+		border-radius: 4px;
+		font-size: 14px;
+		line-height: 1.6rem;
+		color: #aaa;
+		background: #f7f7f7;
+		padding: 10px 16px;
+	}
+}

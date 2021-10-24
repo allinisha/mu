@@ -1,0 +1,33 @@
+.land-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 8%;
+	.land-item{
+		font-size: 14px;
+		line-height: 1.2rem;
+		padding: 8px;
+		border-radius: 6px;
+		background: #edf0f7;
+		color: #0f2d83;
+		margin: 6px;
+	}
+
+	.land-item-xs{
+		width: 40px;
+		height: 40px;
+	}
+
+	.land-item-s{
+		width: 60px;
+		height: 60px;
+	}
+	.land-item-m{
+		width: 80px;
+		height: 80px;
+	}
+	.land-item-l{
+		width: 120px;
+		height: 120px;
+	}
+}
+
