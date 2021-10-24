@@ -17,17 +17,19 @@ jobs:
             - run: yarn run build
             - run: zip -q -r dist.zip ./dist
 
+            - name: Get current date
+              id: date
+              run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
             # 发布 Release
             - name: Create Release
               id: create_release
               uses: actions/create-release@master
               env:
                   GITHUB_TOKEN: ${{ secrets.MU }}
-                  TAG_NAME: tag-${{ steps.date.outputs.date }}
-                  RELEASE_NAME: release-${{ steps.date.outputs.date }}
               with:
-                  tag_name: $TAG_NAME
-                  release_name: $RELEASE_NAME
+                  tag_name: tag-${{ steps.date.outputs.date }}
+                  release_name: release-${{ steps.date.outputs.date }}
                   draft: false
                   prerelease: false
 
