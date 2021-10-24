@@ -36,8 +36,8 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.MU }}
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: ./mu.zip
-                  asset_name: mu.zip
+                  asset_path: ./dist.zip
+                  asset_name: dist.zip
                   asset_content_type: application/zip
 
             # 部署到服务器
@@ -50,6 +50,6 @@ jobs:
                   script: |
                       cd /home/website/whereismu/
                       rm -rf
-                      wget https://github.com/allinisha/mu/releases/latest/download/mu.zip -O mu.zip
-                      upzip mu.zip
+                      wget https://github.com/allinisha/mu/releases/latest/download/mu.zip -O dist.zip
+                      upzip dist.zip
                       pm2 reload
