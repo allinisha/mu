@@ -23,9 +23,11 @@ jobs:
               uses: actions/create-release@master
               env:
                   GITHUB_TOKEN: ${{ secrets.MU }}
+                  TAG_NAME: tag-${{ steps.date.outputs.date }}
+                  RELEASE_NAME: release-${{ steps.date.outputs.date }}
               with:
-                  tag_name: tag-${{ steps.date.outputs.date }}
-                  release_name: release-${{ steps.date.outputs.date }}
+                  tag_name: $TAG_NAME
+                  release_name: $RELEASE_NAME
                   draft: false
                   prerelease: false
 
